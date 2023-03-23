@@ -1,0 +1,24 @@
+https://www.youtube.com/watch?v=gm_L69NHuHM&ab_channel=SanjeevThiyagarajan
+
+docker build . 
+
+docker build -t node-app-image .
+
+npm cache clean --force
+
+docker run --help
+
+docker ps
+
+docker image ls
+
+docker image rm "id image" for exemple 6bd561fe261d
+
+docker run -d --name node-app node-app-image
+
+docker run -p 3000:3000 -d --name node-app node-app-image
+
+docker rm node-app -f 
+
+docker exec -it node-app bash
+exit
