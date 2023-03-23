@@ -18,7 +18,9 @@ docker run -d --name node-app node-app-image
 
 docker run -p 3000:3000 -d --name node-app node-app-image
 
+docker run -v %cd%:/app -p 3000:3000 -d --name node-app node-app-image
+
 docker rm node-app -f 
 
-docker exec -it node-app bash
+docker exec -it node-app //bin//sh
 exit
