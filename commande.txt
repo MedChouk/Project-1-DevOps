@@ -12,6 +12,8 @@ docker ps
 
 docker image ls
 
+docker volume ls
+
 docker image rm "id image" for exemple 6bd561fe261d
 
 docker run -d --name node-app node-app-image
@@ -20,7 +22,14 @@ docker run -p 3000:3000 -d --name node-app node-app-image
 
 docker run -v %cd%:/app -p 3000:3000 -d --name node-app node-app-image
 
+docker run -v %cd%:/app -v /app/node_modules -p 3000:3000 -d --name node-app node-app-image
+
 docker rm node-app -f 
+
+docker-compose up -d 
+
+docker-compose up -d --build
+
 
 docker exec -it node-app //bin//sh
 exit
